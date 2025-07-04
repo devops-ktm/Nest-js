@@ -57,9 +57,6 @@ npm start
 Frontend runs at: http://localhost:3000 (or another port if already in use)
 
 🧪 Testing (NestJS)
-bash
-Copy
-Edit
 # Unit tests
 npm run test
 
@@ -68,14 +65,10 @@ npm run test:e2e
 📦 Build for Production
 React:
 
-bash
-Copy
-Edit
+---
 npm run build
 NestJS:
+---
 
-bash
-Copy
-Edit
 npm run build
 npm run start:prod
