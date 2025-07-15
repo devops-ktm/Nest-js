@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Step 1: Build frontend
 FROM node:18 AS build
 WORKDIR /app
@@ -12,3 +13,19 @@ RUN npm run build  # or RUN npx react-scripts build
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
+=======
+# Step 1: Build frontend
+FROM node:18 AS build
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build  # or RUN npx react-scripts build
+
+# Step 2: Serve with Nginx
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+>>>>>>> d8471975842cd7ba86cb40cf081c26b166ab5319
