@@ -7,7 +7,7 @@ function App() {
   const [editForm, setEditForm] = useState({ name: '', email: '' });
 
   useEffect(() => {
-    axios.get('http://localhost:3000/users')
+    axios.get('http://localhost:3001/users')
       .then(res => setUsers(res.data))
       .catch(err => console.error('Error fetching users:', err));
   }, []);
